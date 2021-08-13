@@ -48,7 +48,7 @@ public class ImagesTesteEventos extends javax.swing.JFrame {
         getContentPane().add(jLabelResult);
         jLabelResult.setBounds(10, 270, 260, 14);
 
-        jBtnMouse.setText("Ao passa com o mouse");
+        jBtnMouse.setText("Ao passar o mouse na área do botão");
         jBtnMouse.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jBtnMouseMouseEntered(evt);
@@ -58,7 +58,7 @@ public class ImagesTesteEventos extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jBtnMouse);
-        jBtnMouse.setBounds(93, 30, 170, 23);
+        jBtnMouse.setBounds(93, 30, 220, 23);
 
         setBounds(0, 0, 416, 339);
     }// </editor-fold>//GEN-END:initComponents
@@ -76,14 +76,15 @@ public class ImagesTesteEventos extends javax.swing.JFrame {
 
     private void jBtnMouseMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnMouseMouseEntered
         // TODO add your handling code here:
-        
         jLabelResult.setText("Mouse entrou na área do botão");
         
     }//GEN-LAST:event_jBtnMouseMouseEntered
 
     private void jBtnMouseMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnMouseMouseExited
         // TODO add your handling code here:
+        
         jLabelResult.setText("Saiu da área do botão");
+
         
     }//GEN-LAST:event_jBtnMouseMouseExited
 
