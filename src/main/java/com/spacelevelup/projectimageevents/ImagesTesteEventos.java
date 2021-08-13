@@ -29,6 +29,7 @@ public class ImagesTesteEventos extends javax.swing.JFrame {
 
         jbtnClick = new javax.swing.JButton();
         jLabelResult = new javax.swing.JLabel();
+        jBtnMouse = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -45,7 +46,19 @@ public class ImagesTesteEventos extends javax.swing.JFrame {
         jLabelResult.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabelResult.setText("Resultado");
         getContentPane().add(jLabelResult);
-        jLabelResult.setBounds(10, 270, 100, 14);
+        jLabelResult.setBounds(10, 270, 260, 14);
+
+        jBtnMouse.setText("Ao passa com o mouse");
+        jBtnMouse.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jBtnMouseMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jBtnMouseMouseExited(evt);
+            }
+        });
+        getContentPane().add(jBtnMouse);
+        jBtnMouse.setBounds(93, 30, 170, 23);
 
         setBounds(0, 0, 416, 339);
     }// </editor-fold>//GEN-END:initComponents
@@ -60,6 +73,19 @@ public class ImagesTesteEventos extends javax.swing.JFrame {
         jLabelResult.setText("vamos lá");
         }
     }//GEN-LAST:event_jbtnClickActionPerformed
+
+    private void jBtnMouseMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnMouseMouseEntered
+        // TODO add your handling code here:
+        
+        jLabelResult.setText("Mouse entrou na área do botão");
+        
+    }//GEN-LAST:event_jBtnMouseMouseEntered
+
+    private void jBtnMouseMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnMouseMouseExited
+        // TODO add your handling code here:
+        jLabelResult.setText("Saiu da área do botão");
+        
+    }//GEN-LAST:event_jBtnMouseMouseExited
 
     /**
      * @param args the command line arguments
@@ -97,6 +123,7 @@ public class ImagesTesteEventos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBtnMouse;
     private javax.swing.JLabel jLabelResult;
     private javax.swing.JButton jbtnClick;
     // End of variables declaration//GEN-END:variables

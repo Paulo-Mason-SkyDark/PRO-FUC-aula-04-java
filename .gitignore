@@ -3,6 +3,12 @@
 # dependencies
 /.gradle
 /gradle
+/target/maven-arquiver
+/target/maven-status
+/target/test-classes
+/target/ProjectImageEvents-1.0-SNAPSHOT.jar
+/target/generated-sources
+
 
 
 
