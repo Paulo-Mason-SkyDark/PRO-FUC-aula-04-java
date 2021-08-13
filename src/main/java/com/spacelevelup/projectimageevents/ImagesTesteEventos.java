@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package com.spacelevelup.projectimageevents;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -30,6 +31,10 @@ public class ImagesTesteEventos extends javax.swing.JFrame {
         jbtnClick = new javax.swing.JButton();
         jLabelResult = new javax.swing.JLabel();
         jBtnMouse = new javax.swing.JButton();
+        jBtnFoco = new javax.swing.JButton();
+        jLabelImage = new javax.swing.JLabel();
+        jButtonImage1 = new javax.swing.JButton();
+        jButtonImage2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -41,12 +46,12 @@ public class ImagesTesteEventos extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jbtnClick);
-        jbtnClick.setBounds(10, 30, 70, 23);
+        jbtnClick.setBounds(10, 10, 70, 23);
 
         jLabelResult.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabelResult.setText("Resultado");
         getContentPane().add(jLabelResult);
-        jLabelResult.setBounds(10, 270, 260, 14);
+        jLabelResult.setBounds(70, 420, 160, 14);
 
         jBtnMouse.setText("Ao passar o mouse na área do botão");
         jBtnMouse.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -58,9 +63,40 @@ public class ImagesTesteEventos extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jBtnMouse);
-        jBtnMouse.setBounds(93, 30, 220, 23);
+        jBtnMouse.setBounds(100, 10, 220, 23);
 
-        setBounds(0, 0, 416, 339);
+        jBtnFoco.setText("Foco");
+        jBtnFoco.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jBtnFocoFocusGained(evt);
+            }
+        });
+        getContentPane().add(jBtnFoco);
+        jBtnFoco.setBounds(340, 10, 55, 23);
+
+        jLabelImage.setText("Imagem");
+        getContentPane().add(jLabelImage);
+        jLabelImage.setBounds(20, 44, 510, 340);
+
+        jButtonImage1.setText("Emo +");
+        jButtonImage1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonImage1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonImage1);
+        jButtonImage1.setBounds(290, 420, 80, 23);
+
+        jButtonImage2.setText("Emo -");
+        jButtonImage2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonImage2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonImage2);
+        jButtonImage2.setBounds(380, 420, 73, 23);
+
+        setBounds(0, 0, 567, 487);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtnClickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnClickActionPerformed
@@ -87,6 +123,24 @@ public class ImagesTesteEventos extends javax.swing.JFrame {
 
         
     }//GEN-LAST:event_jBtnMouseMouseExited
+
+    private void jBtnFocoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jBtnFocoFocusGained
+        // TODO add your handling code here:
+        jLabelResult.setText("O botão recebeu foco");
+        
+    }//GEN-LAST:event_jBtnFocoFocusGained
+
+    private void jButtonImage1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonImage1ActionPerformed
+        // TODO add your handling code here
+        ImageIcon icon = new ImageIcon("D:/Sistema/Videos/lee/Eu/emo.jpg");
+        jLabelImage.setIcon(icon);
+    }//GEN-LAST:event_jButtonImage1ActionPerformed
+
+    private void jButtonImage2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonImage2ActionPerformed
+        // TODO add your handling code here:
+        ImageIcon icon = new ImageIcon("D:/Sistema/Videos/lee/Eu/linda.jpg");
+        jLabelImage.setIcon(icon);
+    }//GEN-LAST:event_jButtonImage2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,7 +178,11 @@ public class ImagesTesteEventos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBtnFoco;
     private javax.swing.JButton jBtnMouse;
+    private javax.swing.JButton jButtonImage1;
+    private javax.swing.JButton jButtonImage2;
+    private javax.swing.JLabel jLabelImage;
     private javax.swing.JLabel jLabelResult;
     private javax.swing.JButton jbtnClick;
     // End of variables declaration//GEN-END:variables
